@@ -1,0 +1,44 @@
+.social-links{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5%;
+	justify-content: space-between;
+}
+.social-links section{
+	flex-basis: 30%;
+}
+.social-icons-footer i{
+	font-size: 37px;
+	padding: 5px;
+}
+.instagram img{
+	padding: 5px;
+}
+.footer-buttons{
+	display: block;
+	border: 1px solid #2196f3;
+	color: #2196f3;
+	font-size: 14px;
+	font-weight: bolder;
+	background-color: white;
+	margin: 20px auto;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+.footer-buttons:hover{
+	color: #fff;
+	border: 1px solid #fff;
+	background-color: #2196f3;
+}
+.copyright{
+	width: 100%;
+	background-color: black;
+	color: #fff;
+	padding: 5px;
+	text-align: center;
+}
+.Instagram img{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
