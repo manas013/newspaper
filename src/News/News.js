@@ -20,7 +20,7 @@ function News() {
          <Header/>
          <div className='container'>
       <div className=''>
-      {newsData && newsData.slice(0, 1).map((item) =>
+      {newsData && newsData.slice(3, 4).map((item) =>
 <div class="card_news">                   
   <img src={item.image} class="card-img-top" alt="..."/>
   <div class="card-body">

@@ -210,3 +210,7 @@ p{
 	width: 100% ;
     margin-bottom: 20px;
 }
+.card_news img{
+	max-width: 757px;
+    width: 100%;
+}
