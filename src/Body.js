@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import './body.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 function Body() {
     const [newsData, setnews_Data] = useState([])
+    const history = useNavigate();
     React.useEffect(() => {
-        let news_api = `https://gnews.io/api/v4/search?q=example&token=aae105768304b44284cd11a17184ff47&lang=en`
+        let news_api = `https://gnews.io/api/v4/search?q=example&token=91462f9359ca5f3177cf4d070222faeb&lang=en`
         axios.get(news_api)
             .then((data) => {
                 console.log(data.data.articles);
@@ -75,7 +77,7 @@ function Body() {
                         <div class="news-container">
                             {newsData && newsData.slice(6, 7).map((item) =>
                                 <>
-                                    <img src={item.image} className='e-block' />
+                                    <img src={item.image} className='e-block' alt='cfcgfc'  onClick={() => { history('/News3') }} />
                                     <p class="carousel-text">This floating entertainment hub</p>
                                 </>)}
                         </div>
@@ -84,7 +86,7 @@ function Body() {
                         <div class="news-container">
                             {newsData && newsData.slice(8, 9).map((item) =>
                                 <>
-                                    <img src={item.image} className='e-block' />
+                                    <img src={item.image} className='e-block' alt='dfxxcgf'  onClick={() => { history('/News2') }} />
                                     <p class="carousel-text">This floating entertainment hub</p>
                                 </>)}
                         </div>
@@ -96,7 +98,7 @@ function Body() {
                         <div class="news-container">
                             {newsData && newsData.slice(9, 10).map((item) =>
                                 <>
-                                    <img src={item.image} className='e-block' />
+                                    <img src={item.image} className='e-block' alt='vgbvjhb'  onClick={() => { history('/New1') }} />
                                     <p class="carousel-text">This floating entertainment hub</p>
                                 </>)}
                         </div>
@@ -105,7 +107,7 @@ function Body() {
                         <div class="news-container">
                             {newsData && newsData.slice(3, 4).map((item) =>
                                 <>
-                                    <img src={item.image} className='e-block' />
+                                    <img src={item.image} className='e-block' alt='ghcd'  onClick={() => { history('/News') }} />
                                     <p class="carousel-text">This floating entertainment hub</p>
                                 </>)}
                         </div>
@@ -118,7 +120,7 @@ function Body() {
                         <h2>WORLD</h2>
                         {newsData && newsData.slice(5, 6).map((item) =>
                             <>
-                                <img src={item.image} />
+                                <img src={item.image} alt='ghvghc' />
                                 <h3>{item.title}</h3>
                                 <p>{item.description}</p>
                             </>)}
@@ -127,7 +129,7 @@ function Body() {
                         <h2>SPORT</h2>
                         {newsData && newsData.slice(7, 8).map((item) =>
                             <>
-                                <img src={item.image} />
+                                <img src={item.image} alt='cfgfc' onClick={() => { history('/News3') }} />
                                 <h3>{item.title}</h3>
                                 <p>{item.description}</p>
                             </>)}
@@ -138,35 +140,35 @@ function Body() {
 					<div class="recent-news">
                     {newsData && newsData.slice(8, 9).map((item) =>
                             <>
-						 <img src={item.image} />
+						 <img src={item.image} alt='fsadsaze' />
 						<p>{item.title}</p>
                         </>)}
 					</div>
 					<div class="recent-news">
                     {newsData && newsData.slice(9, 10).map((item) =>
                             <>
-						 <img src={item.image} />
+						 <img src={item.image} alt='hfnd' />
 						<p>{item.title}</p>
                         </>)}
 					</div>
 					<div class="recent-news">
                     {newsData && newsData.slice(1, 2).map((item) =>
                             <>
-						 <img src={item.image} />
+						 <img src={item.image} alt='ghvngn' onClick={() => { history('/News4') }} />
 						<p>{item.title}</p>
                         </>)}
 					</div>
 					<div class="recent-news">
                     {newsData && newsData.slice(2, 3).map((item) =>
                             <>
-						 <img src={item.image} />
+						 <img src={item.image} alt='aerszwe' />
 						<p>{item.title}</p>
                         </>)}
 					</div>
 					<div class="recent-news">
                     {newsData && newsData.slice(4, 5).map((item) =>
                             <>
-						 <img src={item.image} />
+						 <img src={item.image} alt='aewd' />
 						<p>{item.title}</p>
                         </>)}
 					</div>
