@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import './header.css';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+    const history = useNavigate();
     const [newsData, setnews_Data] = useState([])
     React.useEffect(() => {
-        let news_api = `https://gnews.io/api/v4/search?q=example&token=a224a8814430fe19be078947fdfd48e8&lang=en`
+        let news_api = `https://gnews.io/api/v4/search?q=example&token=aae105768304b44284cd11a17184ff47&lang=en`
         axios.get(news_api)
             .then((data) => {
                 console.log(data.data.articles);
@@ -38,25 +40,34 @@ function Header() {
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" onClick={() => {
+                                    history('/');
+                                }}>HOME</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Sports</a>
+                                <a class="nav-link"  onClick={() => {
+                                    history('/Sports');
+                                }}>Sports</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Politics</a>
+                                 <a class="nav-link"   onClick={() => {
+                                    history('/Politics');
+                                }}>Politics</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Business</a>
+                            <a class="nav-link"   onClick={() => {
+                                    history('/Business');
+                                }}>Buisness</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Travel</a>
+                            <a class="nav-link"   onClick={() => {
+                                    history('/Technology');
+                                }}>Technology</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Technology</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">vedios</a>
+                            <a class="nav-link"   onClick={() => {
+                                    history('/Travel');
+                                }}>Travels</a>
                             </li>
 
                         </ul>

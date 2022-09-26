@@ -12,7 +12,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.d-block{
-  max-height: 500px;
-  height: auto;
+.d-flex{
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.d-flex img{
+  height: 150px;
+
+}
+.card{
+  max-width: 340px !important;
+    width: 100% !important;
+    margin-bottom: 20px;
 }

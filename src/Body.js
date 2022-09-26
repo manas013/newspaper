@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import './body.css';
 import axios from 'axios';
 
+
 function Body() {
     const [newsData, setnews_Data] = useState([])
     React.useEffect(() => {
-        let news_api = `https://gnews.io/api/v4/search?q=example&token=a224a8814430fe19be078947fdfd48e8&lang=en`
+        let news_api = `https://gnews.io/api/v4/search?q=example&token=aae105768304b44284cd11a17184ff47&lang=en`
         axios.get(news_api)
             .then((data) => {
                 console.log(data.data.articles);
