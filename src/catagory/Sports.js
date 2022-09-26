@@ -11,7 +11,7 @@ function Sports() {
   const history = useNavigate();
   const [newsData, setnews_Data] = useState([])
   React.useEffect(() => {
-      let news_api = `https://gnews.io/api/v4/search?q=example&token=aae105768304b44284cd11a17184ff47&lang=en`
+      let news_api = `https://gnews.io/api/v4/search?q=example&token=91462f9359ca5f3177cf4d070222faeb&lang=en`
       axios.get(news_api)
           .then((data) => {
               console.log(data.data.articles);
