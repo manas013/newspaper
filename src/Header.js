@@ -2,8 +2,21 @@ import React, { useState } from 'react'
 import './header.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import {
+    FacebookShareButton,
+    WhatsappShareButton,
+    WhatsappIcon,
+    FacebookIcon,
+    TwitterShareButton,
+    TwitterIcon,
+    LineShareButton,
+    LineIcon,
+    InstapaperIcon,
+    InstapaperShareButton,
+} from 'react-share';
 
 function Header() {
+    const shareUrl = 'https://www.pakkamarwadi.tk/';
     const history = useNavigate();
     const [newsData, setnews_Data] = useState([])
     React.useEffect(() => {
@@ -21,10 +34,52 @@ function Header() {
                 <img src='https://t4.ftcdn.net/jpg/02/95/88/07/360_F_295880703_ckdOjygZvaICW6Xbqjo1Ku5aeqE4n65G.jpg' alt='kfs' />
                 <h1>News Live</h1>
                 <div className='image_icon'>
-                    <i class="bi bi-facebook"></i>
-                    <i class="bi bi-twitter"></i>
-                    <i class="bi bi-share-fill"></i>
-                    <i class="bi bi-instagram"></i>
+                    <i> <FacebookShareButton
+                        url={shareUrl}
+                        quote={'news paper live'}
+                        hashtag={'#Valorant'}
+                    >
+                        <FacebookIcon size={20} round={true} />
+                    </FacebookShareButton> </i>
+
+                    <i>  <WhatsappShareButton
+                        url={shareUrl}
+                        quote={'Title or jo bhi aapko likhna ho'}
+                        hashtag={'#portfolio...'}
+                    >
+                        <WhatsappIcon size={20} round={true} />
+                    </WhatsappShareButton>
+                    </i>
+                    <i>
+                        <TwitterShareButton
+                        url={shareUrl}
+                        quote={'Title or jo bhi aapko likhna ho'}
+                        hashtag={'#portfolio...'}
+                        >
+                            <TwitterIcon size={20} round={true}></TwitterIcon>
+
+                        </TwitterShareButton>
+                    </i>
+                    <i>
+                        < LineShareButton 
+                           url={shareUrl}
+                           quote={'Title or jo bhi aapko likhna ho'}
+                           hashtag={'#portfolio...'}>
+                            <LineIcon size={20} round={true}></LineIcon>
+
+                        </LineShareButton>
+
+                    </i>
+                    <i>
+                        <InstapaperShareButton
+                        url={shareUrl}
+                        quote={'Title or jo bhi aapko likhna ho'}
+                        hashtag={'#portfolio...'}>
+                            <InstapaperIcon size={20} round={true}></InstapaperIcon>
+
+                        </InstapaperShareButton>
+                        
+                    </i>
 
                 </div>
             </div>
@@ -45,27 +100,27 @@ function Header() {
                                 }}>HOME</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  onClick={() => {
+                                <a class="nav-link" onClick={() => {
                                     history('/Sports');
                                 }}>Sports</a>
                             </li>
                             <li class="nav-item">
-                                 <a class="nav-link"   onClick={() => {
+                                <a class="nav-link" onClick={() => {
                                     history('/Politics');
                                 }}>Politics</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link"   onClick={() => {
+                                <a class="nav-link" onClick={() => {
                                     history('/Business');
                                 }}>Buisness</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link"   onClick={() => {
+                                <a class="nav-link" onClick={() => {
                                     history('/Technology');
                                 }}>Technology</a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link"   onClick={() => {
+                                <a class="nav-link" onClick={() => {
                                     history('/Travel');
                                 }}>Travels</a>
                             </li>
